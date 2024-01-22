@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            SeaTraders
+        </div>
+        <div class="content">
+            <p>Sorry ! Websites is currently under construction</p>
+            <h1>We're <span class="host">Hosting</span> soon</h1>
+            <div class="timer">
+                <div class="day">
+                    <p id="day"></p>
+                    <span>Days</span>
+                </div>
+                <div class="hour">
+                    <p id="hour">00</p>
+                    <span>Hours</span>
+                </div>
+                <div class="minutes">
+                    <p id="min">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div class="seconds">
+                    <p id="sec">00</p>
+                    <span>Seconds</span>
+                </div>
+                
+            </div>
+            <button>See more<span class="material-symbols-outlined">play_arrow</span></button>
+        </div>
+        <img src="icons8-fish-80.png" alt="no images" class="fish">
+        
+    </div>
+    <script>
+        var setCountDate = new Date("Jan 26,2024 00:00:00").getTime();
+        console.log(setCountDate)
+        var x = setInterval(function(){
+            var now = new Date().getTime();
+            var distance = setCountDate - now;
+
+            var days = Math.floor(distance/(1000*60*60*24));
+            var hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+            var min = Math.floor((distance % (1000*60*60))/(1000*60));
+            var seconds = Math.floor((distance%(1000*60))/1000);
+
+            document.getElementById("day").innerHTML = days;
+            document.getElementById("hour").innerHTML = hours;
+            document.getElementById("min").innerHTML = min
+            document.getElementById("sec").innerHTML = seconds
+
+        },1000)
+    </script>
+</body>
+</html>

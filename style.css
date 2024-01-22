@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image:url(sea5.jpg);
+    background-size: cover;
+    background-position: 0;
+    padding: 0 8%;
+
+}
+.logo{
+    padding: 40px 40px;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.content{
+    top: 40%;
+    position: absolute;
+    transform: translateY(-60%);
+}
+.content p{
+    color: aliceblue;
+    letter-spacing: 1px;
+}
+.content h1{
+    font-weight:bold ;
+    font-size:50px;
+    color: white;
+}
+.content .host{
+    font-weight:bold ;
+    font-size:50px;
+    color: rgb(119, 236, 164);
+}
+.content button{
+    color: white;
+    margin-top: 10px;
+    height: 50px;
+    width: 150px;
+    border: 2px solid skyblue;
+    font-weight: 900;
+    background: transparent;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer{
+    display: flex;
+    color: white;
+}
+
+.fish{
+    width: 150px;
+    left: 0;
+    bottom:10%;
+    position: absolute;
+    animation: movefish 3s linear infinite;
+}
+.timer div {
+    flex-basis: 100px;
+}
+.timer div p{
+    font-size: 60px;
+}
+
+@keyframes movefish{
+   0%{
+    left : 0;
+    opacity: 0;
+   }
+   100%{
+    left: 90%;
+    opacity: 1;
+   }
+}
